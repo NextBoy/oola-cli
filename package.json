@@ -1,6 +1,6 @@
 {
   "name": "oola-cli",
-  "version": "{{version}}",
+  "version": "1.0.0",
   "bin": {
     "oola": "./bin/index.js"
   },
@@ -9,5 +9,24 @@
     "download-git-repo": "^1.0.2",
     "inquirer": "^5.2.0",
     "ora": "^2.1.0"
-  }
+  },
+  "main": "./bin.index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NextBoy/oola-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "vue",
+    "vue-cli"
+  ],
+  "author": "nextboy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NextBoy/oola-cli/issues"
+  },
+  "homepage": "https://github.com/NextBoy/oola-cli#readme"
 }
