@@ -6,13 +6,16 @@ const utils = require('../utils/index')
 const templateData = require('../config/index')
 // 主程序
 const init = () => {
-    const cmd = ['init', 'set', 'remove', 'list']
+    const cmd = ['init', 'set', 'remove', 'list', 'help']
     // 获取初始化指令的参数
     let cli = utils.initParams[0].toLowerCase()
     if (!cmd.includes(cli)) {
         console.log(chalk.red('-----非法指令，请检查输入是否有误-----'))
         process.exit(1)
         return 0
+    }
+    if (cli === 'help') {
+        utils.configData.help()
     }
     if (cli === 'list') {
         utils.configData.showTemplate()

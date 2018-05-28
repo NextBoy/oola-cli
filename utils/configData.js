@@ -22,6 +22,13 @@ const createSource = (url) => {
 
 
 const configData = {
+    help: () => {
+        console.log(chalk.cyan('    oola init <project-name>: 不带project-name则表示在当前目录下生成模板'))
+        console.log(chalk.cyan('    oola list: 查看当前项目模板'))
+        console.log(chalk.cyan('    oola set <template-name> <project-git-address>: 配置模板'))
+        console.log(chalk.cyan('    oola remove <template-name> : 删除模板'))
+        process.exit(0)
+    },
     showTemplate: () => {
         console.log(chalk.green(`      -----模板列表-----`))
         console.log(chalk.green(JSON.stringify(data, null, 8)))
